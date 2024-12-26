@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".menuFragment">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="75dp"
+        android:drawableStart="@drawable/search"
+        android:layout_weight="1"
+        android:drawablePadding="5dp"
+        android:paddingStart="15dp"
+        android:hint="Cari makanan atau minuman"
+        android:background="@drawable/bg_white"
+        android:fontFamily="@font/teko_semibold"
+        android:textColor="@color/hint"
+        android:elevation="5dp"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_profile"
+        android:background="@drawable/ic_profile"
+        android:elevation="6dp"
+        android:onClick="openProfile"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/primary">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lagi pengen makan apa hari ini?"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/teko_semibold"
+                    android:textSize="40dp"
+                    android:layout_marginTop="140dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="315dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
+
+                <Button
+                    android:id="@+id/semuakat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semua"
+                    android:fontFamily="@font/teko_semibold"
+                    android:textColor="@color/black"
+                    android:elevation="10dp"
+                    android:backgroundTint="@color/grey"
+                    android:layout_marginEnd="10dp"/>
+                <Button
+                    android:id="@+id/makankat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Makanan"
+                    android:fontFamily="@font/teko_semibold"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/grey"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="20dp"/>
+                <Button
+                    android:id="@+id/minumkat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Minuman"
+                    android:fontFamily="@font/teko_semibold"
+                    android:textColor="@color/white"
+                    android:elevation="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/teko_semibold"
+                android:textSize="26sp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="375dp"
+                android:text="Sedang Populer!" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="430dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:onClick="DetailMenu"                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:src="@drawable/nasiayamgeprek"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:fontFamily="@font/teko"
+                                android:textColor="@color/black"
+                                android:text="Nasi + Ayam Geprek"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="20dp"
+                        android:layout_marginEnd="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:src="@drawable/mie"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:fontFamily="@font/teko"
+                                android:textColor="@color/black"
+                                android:text="Mie Goreng"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="20dp"
+                        android:layout_marginEnd="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:src="@drawable/mie"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:fontFamily="@font/teko"
+                                android:textColor="@color/black"
+                                android:text="Mie Goreng"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/teko_semibold"
+                android:textSize="26sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="645dp"
+                android:text="Makanan Berat!" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="700dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="5dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:src="@drawable/nasiayamgeprek"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:fontFamily="@font/teko"
+                                android:textColor="@color/black"
+                                android:text="Nasi + Ayam Geprek"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="20dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:src="@drawable/mie"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:fontFamily="@font/teko"
+                                android:textColor="@color/black"
+                                android:text="Mie Goreng"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
