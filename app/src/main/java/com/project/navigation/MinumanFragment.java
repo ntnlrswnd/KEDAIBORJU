@@ -19,96 +19,58 @@ import android.widget.Button;
  */
 public class MinumanFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+        public static MinumanFragment newInstance(String param1, String param2) {
+            MinumanFragment fragment = new MinumanFragment();
+            Bundle args = new Bundle();
+            args.putString("param1", param1);
+            args.putString("param2", param2);
+            fragment.setArguments(args);
+            return fragment;
+        }
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_menu, container, false);
 
-    public MinumanFragment() {
-        // Required empty public constructor
-    }
+            Button semuakatButton = rootView.findViewById(R.id.semuakat);
+            Button makankatButton = rootView.findViewById(R.id.makankat);
+            Button minumkatButton = rootView.findViewById(R.id.minumkat);
+            CardView menu = rootView.findViewById(R.id.menu);
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MinumanFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MinumanFragment newInstance(String param1, String param2) {
-        MinumanFragment fragment = new MinumanFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_menu, container, false);
-
-        // Find the buttons and cardview by ID
-        Button semuakatButton = rootView.findViewById(R.id.semuakat);
-        Button makankatButton = rootView.findViewById(R.id.makankat);
-        Button minumkatButton = rootView.findViewById(R.id.minumkat);
-        CardView menu = rootView.findViewById(R.id.menu);
-
-        // Set OnClickListener for menu CardView to navigate to DetailMenuMakanan
-        menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Create an intent to start a new activity for the CardView
+            // Navigasi ke DetailMenuMakanan saat CardView diklik
+            menu.setOnClickListener(v -> {
                 Intent intent = new Intent(getActivity(), DetailMenuMakanan.class);
                 startActivity(intent);
-            }
-        });
+            });
 
-        // Set OnClickListener for semuakatButton to navigate to menuFragment
-        semuakatButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            // Navigasi ke MenuFragment
+            semuakatButton.setOnClickListener(v -> {
                 menuFragment menuFrag = new menuFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.flFragment, menuFrag);
-                transaction.addToBackStack(null);  // Add transaction to back stack
+                transaction.addToBackStack(null);
                 transaction.commit();
-            }
-        });
+            });
 
-        // Set OnClickListener for makankatButton to navigate to MakananFragment
-        makankatButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            // Navigasi ke MakananFragment
+            makankatButton.setOnClickListener(v -> {
                 MakananFragment makananFrag = new MakananFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.flFragment, makananFrag);
-                transaction.addToBackStack(null);  // Add transaction to back stack
+                transaction.addToBackStack(null);
                 transaction.commit();
-            }
-        });
+            });
 
-        // Set OnClickListener for minumkatButton to navigate to MinumanFragment
-        minumkatButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            // Navigasi ke MinumanFragment
+            minumkatButton.setOnClickListener(v -> {
                 MinumanFragment minumanFrag = new MinumanFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.flFragment, minumanFrag);
-                transaction.addToBackStack(null);  // Add transaction to back stack
+                transaction.addToBackStack(null);
                 transaction.commit();
-            }
-        });
+            });
 
-        return rootView;
-    }
-
+            return rootView;
+        }
 }

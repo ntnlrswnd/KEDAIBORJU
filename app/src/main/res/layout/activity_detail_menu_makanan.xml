@@ -36,7 +36,7 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/teko_semibold"
                 android:textSize="28dp"
-                android:paddingEnd="10dp"
+                android:paddingEnd="40dp"
                 android:textAlignment="center"/>
         </LinearLayout>
 
