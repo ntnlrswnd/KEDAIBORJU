@@ -84,41 +84,109 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:fontFamily="@font/teko"
-                    android:text="Metode Pembayaran"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"/>
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:fontFamily="@font/teko"
-                    android:text="Status"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/teko"
+                        android:text="Metode Pembayaran"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:fontFamily="@font/teko"
-                    android:text="Waktu"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/teko"
+                        android:text="Cash"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
 
-                <TextView
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:fontFamily="@font/teko"
-                    android:text="Tanggal"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"/>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/teko"
+                        android:text="Status"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/teko"
+                        android:text="Selesai"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/teko"
+                        android:text="Waktu"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/teko"
+                        android:text="04.29 WIB"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/teko"
+                        android:text="Tanggal"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/teko"
+                        android:text="12 Des 2024"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -150,17 +218,31 @@
                     android:text="Tanggal"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:fontFamily="@font/teko"
-                    android:text="Jumlah"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"/>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/teko"
+                        android:text="Jumlah"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/teko"
+                        android:text="Rp. 12.000"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -184,16 +266,35 @@
                 android:layout_marginEnd="15dp"
                 android:elevation="5dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="15dp"
-                    android:fontFamily="@font/teko_semibold"
-                    android:text="Total"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"/>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:fontFamily="@font/teko_semibold"
+                        android:text="Total"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:fontFamily="@font/teko_semibold"
+                        android:text="Rp. 12.000"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
