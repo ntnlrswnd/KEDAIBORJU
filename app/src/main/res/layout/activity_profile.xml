@@ -35,8 +35,7 @@
                 android:layout_gravity="center"
                 android:src="@drawable/ic_profile"
                 android:background="@drawable/ic_profile"
-                android:elevation="6dp"
-                android:onClick="openProfile"/>
+                android:elevation="6dp"/>
 
             <TextView
                 android:layout_width="match_parent"
