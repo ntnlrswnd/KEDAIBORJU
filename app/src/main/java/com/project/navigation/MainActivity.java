@@ -12,7 +12,7 @@ import com.google.android.material.navigation.NavigationBarView;
 public class MainActivity extends AppCompatActivity {
 
     private final homeFragment homeFragment = new homeFragment();
-    private final menuFragment menuFragment = new menuFragment();
+    private final PemberitahuanFragment PemberitahuanFragment = new PemberitahuanFragment();
     private final settingFragment settingFragment = new settingFragment();
 
     @Override
@@ -35,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
                             .commit();
                     return true;
 
-                } else if (id == R.id.menu) {
+                } else if (id == R.id.notif) {
                     getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.flFragment, menuFragment) // Ganti dengan menuFragment
+                            .replace(R.id.flFragment, PemberitahuanFragment) // Ganti dengan menuFragment
                             .addToBackStack(null) // Menambahkan ke backstack
                             .commit();
                     return true;

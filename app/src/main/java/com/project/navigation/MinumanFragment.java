@@ -12,65 +12,44 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MinumanFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class MinumanFragment extends Fragment {
 
-        public static MinumanFragment newInstance(String param1, String param2) {
-            MinumanFragment fragment = new MinumanFragment();
-            Bundle args = new Bundle();
-            args.putString("param1", param1);
-            args.putString("param2", param2);
-            fragment.setArguments(args);
-            return fragment;
-        }
+    public MinumanFragment() {
+        // Required empty public constructor
+    }
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_menu, container, false);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_menu, container, false);
 
-            Button semuakatButton = rootView.findViewById(R.id.semuakat);
-            Button makankatButton = rootView.findViewById(R.id.makankat);
-            Button minumkatButton = rootView.findViewById(R.id.minumkat);
-            CardView menu = rootView.findViewById(R.id.menu);
+        setupNavigation(rootView);
 
-            // Navigasi ke DetailMenuMakanan saat CardView diklik
-            menu.setOnClickListener(v -> {
-                Intent intent = new Intent(getActivity(), DetailMenuMakanan.class);
-                startActivity(intent);
-            });
+        return rootView;
+    }
 
-            // Navigasi ke MenuFragment
-            semuakatButton.setOnClickListener(v -> {
-                menuFragment menuFrag = new menuFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.flFragment, menuFrag);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            });
+    private void setupNavigation(View rootView) {
+        Button semuakatButton = rootView.findViewById(R.id.semuakat);
+        Button makankatButton = rootView.findViewById(R.id.makankat);
+        Button minumkatButton = rootView.findViewById(R.id.minumkat);
+        CardView menu = rootView.findViewById(R.id.menu);
 
-            // Navigasi ke MakananFragment
-            makankatButton.setOnClickListener(v -> {
-                MakananFragment makananFrag = new MakananFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.flFragment, makananFrag);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            });
+        // Set navigations
+        menu.setOnClickListener(v -> navigateToActivity(DetailMenuMakanan.class));
+        semuakatButton.setOnClickListener(v -> navigateToFragment(new menuFragment()));
+        makankatButton.setOnClickListener(v -> navigateToFragment(new MakananFragment()));
+        minumkatButton.setOnClickListener(v -> navigateToFragment(new MinumanFragment()));
+    }
 
-            // Navigasi ke MinumanFragment
-            minumkatButton.setOnClickListener(v -> {
-                MinumanFragment minumanFrag = new MinumanFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.flFragment, minumanFrag);
-                transaction.addToBackStack(null);
-                transaction.commit();
-            });
+    private void navigateToActivity(Class<?> targetActivity) {
+        Intent intent = new Intent(getActivity(), targetActivity);
+        startActivity(intent);
+    }
 
-            return rootView;
-        }
+    private void navigateToFragment(Fragment fragment) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.flFragment, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
 }

@@ -1,9 +1,7 @@
 package com.project.navigation;
 
-import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,20 +10,21 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link homeFragment#newInstance} factory method to
+ * Use the {@link PemberitahuanFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class homeFragment extends Fragment {
+public class PemberitahuanFragment extends Fragment {
 
-    // Parameter arguments for initialization
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // Parameters
+    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public homeFragment() {
+    public PemberitahuanFragment() {
         // Required empty public constructor
     }
 
@@ -35,10 +34,11 @@ public class homeFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment homeFragment.
+     * @return A new instance of fragment PemberitahuanFragment.
      */
-    public static homeFragment newInstance(String param1, String param2) {
-        homeFragment fragment = new homeFragment();
+    // TODO: Rename and change types and number of parameters
+    public static PemberitahuanFragment newInstance(String param1, String param2) {
+        PemberitahuanFragment fragment = new PemberitahuanFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,25 +59,6 @@ public class homeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-
-        // Initialize CardView
-        CardView lihatMenuCard = view.findViewById(R.id.lihatmenu);
-        CardView lihatDetail = view.findViewById(R.id.detailmenu);
-
-        // Add listener for CardView
-        lihatMenuCard.setOnClickListener(v -> {
-            // Intent to switch to Login Activity
-            Intent intent = new Intent(getActivity(), Menu.class);  // Ensure Login activity is correct
-            startActivity(intent);
-        });
-
-        lihatDetail.setOnClickListener(v -> {
-            // Intent to switch to DetailMenuMakanan Activity
-            Intent intent = new Intent(getActivity(), DetailMenuMakanan.class);
-            startActivity(intent);
-        });
-
-        return view;
+        return inflater.inflate(R.layout.fragment_pemberitahuan, container, false);
     }
 }

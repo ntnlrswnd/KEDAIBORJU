@@ -20,6 +20,15 @@
             android:layout_height="180dp"
             android:background="@color/primary">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/protest_guerrilla"
+                android:text="BORJU"
+                android:textAlignment="center"
+                android:textColor="@color/primary"
+                android:textSize="50dp" />
+
         </FrameLayout>
 
         <LinearLayout
@@ -37,7 +46,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/teko_bold"
-                android:text="Rp. 12.000"
+                android:text="Rp. 15.000"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:gravity="center"/>
@@ -156,7 +165,7 @@
                         android:textAlignment="textEnd"
                         android:layout_marginStart="15dp"
                         android:fontFamily="@font/teko"
-                        android:text="04.29 WIB"
+                        android:text="13.00 WIB"
                         android:textColor="@color/black"
                         android:textSize="18sp"/>
 
@@ -230,7 +239,7 @@
                         android:textAlignment="textEnd"
                         android:layout_marginStart="15dp"
                         android:fontFamily="@font/teko"
-                        android:text="Rp. 12.000"
+                        android:text="Rp. 15.000"
                         android:textColor="@color/black"
                         android:textSize="18sp"/>
 
@@ -282,7 +291,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="15dp"
                         android:fontFamily="@font/teko_semibold"
-                        android:text="Rp. 12.000"
+                        android:text="Rp. 15.000"
                         android:textColor="@color/black"
                         android:textSize="18sp"/>
 
@@ -291,6 +300,7 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/selesai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/teko_semibold"

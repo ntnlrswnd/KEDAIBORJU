@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="jabatan_array">
+        <item>Tunai</item>
+        <item>BORJU COIN</item>
+        <item>BCA</item>
+        <item>Qris</item>
+    </string-array>
+</resources>

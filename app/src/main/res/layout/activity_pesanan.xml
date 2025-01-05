@@ -8,268 +8,233 @@
     android:layout_height="match_parent"
     tools:context=".Pesanan">
 
-
-    <RelativeLayout
+    <!-- Header Section -->
+    <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-
-        <FrameLayout
-            android:id="@+id/frameLayout"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:background="@color/primary">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/teko_bold"
-                android:text="Keranjang"
-                android:textColor="@color/white"
-                android:textSize="30sp" />
-        </FrameLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/bg_white"
-            android:layout_marginTop="70dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:elevation="5dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/teko_bold"
-                android:text="Alamat"
-                android:textColor="@color/black"
-                android:textSize="15dp"
-                tools:ignore="TextSizeCheck" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="130dp"
-                android:fontFamily="@font/teko"
-                android:text="Jl. Raya Cigugur No.306, Kuningan, Kec. Kuningan, Kabupaten Kuningan, Jawa Barat"
-                android:textColor="@color/hint"
-                android:textSize="12dp"
-                android:textStyle="bold"/>
-        </LinearLayout>
+        android:layout_height="200dp"
+        android:background="@color/primary">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/primary"
+            android:layout_margin="15dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/teko_bold"
-            android:textSize="26sp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="190dp"
-            android:text="Pesanan Anda" />
+            android:text="Keranjang"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
 
-<!--        konten 1-->
+    </FrameLayout>
+
+    <!-- Address Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_white"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:elevation="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_margin="15dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/teko_bold"
+            android:textSize="18sp"
+            android:text="Alamat" />
+
+        <EditText
+            android:id="@+id/editTextAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+    <!-- Orders Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/teko_bold"
+        android:textSize="26sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="200dp"
+        android:text="Pesanan Anda" />
+
+    <!-- Order Item Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="240dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/teko_bold"
+                android:text="Nasi + Ayam Geprek"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_fourth"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="240dp"
-            android:orientation="horizontal">
+            android:gravity="end"
+            android:orientation="vertical"
+            android:layout_marginRight="15dp">
 
-            <LinearLayout
-                android:layout_width="115dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:fontFamily="@font/teko_bold"
-                    android:text="Geprek + Nasi"
-                    android:textColor="@color/black" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/harga"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="end"
-                android:orientation="vertical"
-                android:layout_marginRight="15dp">
-
-                <EditText
-                    android:id="@+id/harga"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="Rp.12000"
-                    android:layout_marginRight="36dp"
-                    android:textAlignment="textEnd"/>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:layout_width="55dp"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/hint"
-                        android:textColor="@color/black"
-                        android:text="+"
-                        android:textSize="15dp"/>
-
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:text="1"/>
-
-                    <Button
-                        android:layout_width="55dp"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/hint"
-                        android:textColor="@color/black"
-                        android:text="-"
-                        android:textSize="15dp"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-<!--        metode pembayaran-->
-        <LinearLayout
-            android:layout_width="391dp"
-            android:layout_height="61dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="510dp"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/btn_grey"
-            android:orientation="horizontal">
+                android:layout_marginTop="10dp"
+                android:text="Rp. 10.000"
+                android:layout_marginEnd="40dp"
+                android:fontFamily="@font/teko_semibold"
+                android:textColor="@color/hint"
+                android:textSize="20sp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/teko_bold"
-                    android:textSize="18dp"
-                    android:text="Pembayaran"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:layout_width="144dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="Pilih Jenis Pembayaran"
-                    android:textSize="13dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
-                android:gravity="end"
-                android:orientation="vertical">
-
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="36dp"
-                    android:textSize="15dp"
-                    android:hint="Pilih"
-                    android:textAlignment="textEnd"
-                    android:textColorHint="@color/black"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-<!--        total-->
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="580dp"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="268dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginTop="7dp"
-                    android:fontFamily="@font/teko_bold"
-                    android:text="Total"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/btnmin"
+                    android:layout_width="55dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
+                    android:backgroundTint="@color/hint"
+                    android:text="-"
+                    android:textColor="@color/black" />
 
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/teko_bold"
-                        android:text="12.000"
-                        android:textSize="18sp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"/>
+                <EditText
+                    android:id="@+id/jumlahitem"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:inputType="number"
+                    android:text="1"
+                    android:fontFamily="@font/teko_semibold"
+                    android:textAlignment="center"
+                    android:focusable="false" />
 
-                </LinearLayout>
-
+                <Button
+                    android:id="@+id/btnplus"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/hint"
+                    android:text="+"
+                    android:textColor="@color/black" />
             </LinearLayout>
-
         </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-        <!--button pesan-->
+    <!-- Payment Method Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="680dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bg_white"
+        android:orientation="horizontal"
+        android:elevation="5dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/teko_bold"
+                android:textSize="18dp"
+                android:text="Pembayaran"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Pilih Jenis Pembayaran"
+                android:textSize="13dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:gravity="center|end"
+            android:orientation="vertical">
+            <Spinner
+                android:id="@+id/metode"
+                android:entries="@array/metode_pembayaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/teko_semibold"/>
+        </LinearLayout>
+    </LinearLayout>
 
-        <Button
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="760dp"
+        android:orientation="horizontal"
+        android:foregroundGravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/teko_bold"
+            android:text="Total"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/totalbayar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="630dp"
-            android:backgroundTint="@color/second"
-            android:textColor="@color/white"
-            android:text="Pesan Sekarang"
-            android:textSize="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginStart="15dp"/>
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/teko_semibold"
+            android:text="Rp. 12.000"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
 
-
-    </RelativeLayout>
-
+    <!-- Order Button -->
+    <Button
+        android:id="@+id/btnpesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="800dp"
+        android:backgroundTint="@color/second"
+        android:textColor="@color/white"
+        android:text="Pesan Sekarang"
+        android:fontFamily="@font/teko_semibold"
+        android:textSize="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp" />
 </RelativeLayout>
-
