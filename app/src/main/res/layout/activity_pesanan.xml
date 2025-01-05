@@ -45,12 +45,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_marginStart="15dp"
-                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/teko_bold"
+                android:text="Alamat"
+                android:textColor="@color/black"
                 android:textSize="15dp"
-                android:text="Alamat" />
+                tools:ignore="TextSizeCheck" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -112,7 +113,7 @@
                     android:id="@+id/harga"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Rp.10000"
+                    android:hint="Rp.12000"
                     android:layout_marginRight="36dp"
                     android:textAlignment="textEnd"/>
 
@@ -200,7 +201,7 @@
                     android:textSize="15dp"
                     android:hint="Pilih"
                     android:textAlignment="textEnd"
-                    android:textColorHint="@color/black"
+                    android:textColorHint="@color/black"/>
 
             </LinearLayout>
 
